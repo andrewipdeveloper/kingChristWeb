@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King & Christ | Sustainable Cardboard Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(139, 195, 74, 0.9) 0%, rgba(56, 142, 60, 0.9) 100%);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .process-step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background-color: #8bc34a;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .process-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: calc(100% - 30px);
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-green-600 text-white p-2 rounded-full mr-3">
+                    <i class="fas fa-recycle text-xl"></i>
+                </div>
+                <a href="#" class="title-font text-2xl font-bold text-gray-800">King & Christ</a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-green-600 font-medium">Home</a>
+                <a href="#products" class="text-gray-600 hover:text-green-600">Products</a>
+                <a href="#process" class="text-gray-600 hover:text-green-600">Our Process</a>
+                <a href="#about" class="text-gray-600 hover:text-green-600">About</a>
+                <a href="#contact" class="text-gray-600 hover:text-green-600">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="title-font text-4xl md:text-5xl font-bold mb-6">Sustainable Packaging Solutions</h1>
+                <p class="text-xl mb-8">King & Christ transforms recycled materials into high-quality cardboard boxes, helping businesses reduce their environmental footprint without compromising on quality.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#products" class="bg-white text-green-700 font-bold py-3 px-6 rounded-full text-center hover:bg-gray-100 transition duration-300">Our Products</a>
+                    <a href="#contact" class="border-2 border-white text-white font-bold py-3 px-6 rounded-full text-center hover:bg-white hover:text-green-700 transition duration-300">Get a Quote</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1605000797499-95e51c3b49fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Recycled cardboard boxes" class="rounded-lg shadow-xl max-w-full h-auto max-h-96 object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 rounded-lg">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-tree text-4xl"></i>
+                    </div>
+                    <h3 class="title-font text-2xl font-bold mb-2">100% Recycled</h3>
+                    <p class="text-gray-600">All our cardboard is made from 100% recycled materials</p>
+                </div>
+                <div class="p-6 rounded-lg">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-leaf text-4xl"></i>
+                    </div>
+                    <h3 class="title-font text-2xl font-bold mb-2">Carbon Neutral</h3>
+                    <p class="text-gray-600">Our production process is carbon neutral</p>
+                </div>
+                <div class="p-6 rounded-lg">
+                    <div class="text-green-600 mb-4">
+                        <i class="fas fa-boxes text-4xl"></i>
+                    </div>
+                    <h3 class="title-font text-2xl font-bold mb-2">500+ Clients</h3>
+                    <p class="text-gray-600">Trusted by businesses across multiple industries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl md:text-4xl font-bold mb-4">Our Sustainable Products</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">High-quality cardboard boxes made from recycled materials, designed to meet all your packaging needs while protecting our planet.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Shipping boxes" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="title-font text-xl font-bold">Standard Shipping Boxes</h3>
+                            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Bestseller</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Durable corrugated boxes perfect for e-commerce and shipping needs. Available in 15+ sizes.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-700">From $0.85/box</span>
+                            <button class="text-green-600 hover:text-green-800 font-medium">View Options →</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605007493699-af65885f8bb7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Custom printed boxes" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="title-font text-xl font-bold">Custom Printed Boxes</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">New</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Make your brand stand out with our eco-friendly custom printed packaging solutions.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-700">From $1.25/box</span>
+                            <button class="text-green-600 hover:text-green-800 font-medium">View Options →</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1605001011156-cfa0cdecd276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Mailer boxes" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="title-font text-xl font-bold mb-2">Eco-Friendly Mailers</h3>
+                        <p class="text-gray-600 mb-4">Lightweight yet sturdy mailer boxes with self-locking tabs, perfect for subscription services.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-green-700">From $0.65/box</span>
+                            <button class="text-green-600 hover:text-green-800 font-medium">View Options →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <a href="#" class="inline-block bg-green-600 text-white font-bold py-3 px-8 rounded-full hover:bg-green-700 transition duration-300">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl md:text-4xl font-bold mb-4">Our Sustainable Process</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">From collection to your doorstep, we ensure every step minimizes environmental impact.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="relative">
+                    <!-- Process Step 1 -->
+                    <div class="process-step relative pb-16 pl-8 md:pl-16">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                    <span class="font-bold">1</span>
+                                </div>
+                                <h3 class="title-font text-xl font-bold">Material Collection</h3>
+                            </div>
+                            <p class="text-gray-600">We partner with local recycling centers and businesses to collect used cardboard, diverting tons of waste from landfills each month.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Process Step 2 -->
+                    <div class="process-step relative pb-16 pl-8 md:pl-16">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                    <span class="font-bold">2</span>
+                                </div>
+                                <h3 class="title-font text-xl font-bold">Cleaning & Processing</h3>
+                            </div>
+                            <p class="text-gray-600">Collected materials are thoroughly cleaned and processed using eco-friendly methods to remove contaminants and prepare for pulping.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Process Step 3 -->
+                    <div class="process-step relative pb-16 pl-8 md:pl-16">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                    <span class="font-bold">3</span>
+                                </div>
+                                <h3 class="title-font text-xl font-bold">Pulping & Sheet Formation</h3>
+                            </div>
+                            <p class="text-gray-600">The cleaned cardboard is mixed with water to create pulp, which is then formed into new sheets using energy-efficient machinery.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Process Step 4 -->
+                    <div class="process-step relative pb-16 pl-8 md:pl-16">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                    <span class="font-bold">4</span>
+                                </div>
+                                <h3 class="title-font text-xl font-bold">Corrugation & Cutting</h3>
+                            </div>
+                            <p class="text-gray-600">Sheets are corrugated for strength and precision-cut to customer specifications with minimal material waste.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Process Step 5 -->
+                    <div class="process-step relative pl-8 md:pl-16">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-100">
+                            <div class="flex items-center mb-4">
+                                <div class="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                                    <span class="font-bold">5</span>
+                                </div>
+                                <h3 class="title-font text-xl font-bold">Sustainable Shipping</h3>
+                            </div>
+                            <p class="text-gray-600">Finished products are shipped using carbon-neutral logistics to businesses committed to sustainable packaging solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1605000771807-4325c6c802a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Recycling facility" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="title-font text-3xl md:text-4xl font-bold mb-6">Our Commitment to Sustainability</h2>
+                    <p class="text-gray-700 mb-4">Founded in 2015, King & Christ began with a simple mission: to create packaging solutions that don't compromise our planet's future. What started as a small recycling operation has grown into a leading provider of sustainable cardboard products.</p>
+                    <p class="text-gray-700 mb-6">We believe that businesses shouldn't have to choose between quality packaging and environmental responsibility. That's why we've invested in innovative recycling technologies and sustainable practices that allow us to deliver both.</p>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="title-font text-xl font-bold mb-4 text-green-700">By choosing King & Christ, you're helping to:</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Reduce deforestation and preserve natural habitats</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Divert tons of waste from landfills each year</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Support a circular economy that values reuse</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                                <span>Lower carbon emissions through local production</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="title-font text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Businesses across industries trust King & Christ for their sustainable packaging needs</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Switching to King & Christ's recycled boxes helped us meet our sustainability goals without any compromise on quality. Our customers love the eco-friendly packaging!"</p>
+                    <div class="flex items-center">
+                        <div class="bg-green-100 text-green-800 rounded-full w-12 h-12 flex items-center justify-center font-bold mr-4">JD</div>
+                        <div>
+                            <h4 class="font-bold">Jane Doe</h4>
+                            <p class="text-gray-600 text-sm">CEO, Green Goods</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"The custom printed boxes from King & Christ perfectly represent our brand's commitment to sustainability. The quality is exceptional and the turnaround time was impressive."</p>
+                    <div class="flex items-center">
+                        <div class="bg-green-100 text-green-800 rounded-full w-12 h-12 flex items-center justify-center font-bold mr-4">JS</div>
+                        <div>
+                            <h4 class="font-bold">John Smith</h4>
+                            <p class="text-gray-600 text-sm">Founder, EcoEssentials</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"As a large e-commerce business, we needed a reliable supplier of sustainable packaging. King & Christ has exceeded our expectations in both quality and environmental impact."</p>
+                    <div class="flex items-center">
+                        <div class="bg-green-100 text-green-800 rounded-full w-12 h-12 flex items-center justify-center font-bold mr-4">AB</div>
+                        <div>
+                            <h4 class="font-bold">Alice Brown</h4>
+                            <p class="text-gray-600 text-sm">Operations Manager, ShopEco</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-green-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="title-font text-3xl md:text-4xl font-bold mb-6">Ready to Make the Sustainable Switch?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join hundreds of businesses that have already reduced their environmental impact with our recycled cardboard solutions.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#contact" class="bg-white text-green-700 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300">Get a Free Quote</a>
+                <a href="tel:+18005551234" class="border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-green-700 transition duration-300">
+                    <i class="fas fa-phone mr-2"></i> (800) 555-1234
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="title-font text-3xl md:text-4xl font-bold mb-6">Get In Touch</h2>
+                    <p class="text-gray-700 mb-8">Have questions about our products or process? Our team is ready to help you find the perfect sustainable packaging solution for your business.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 text-green-800 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Our Location</h4>
+                                <p class="text-gray-600">123 Green Way, Eco City, EC 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 text-green-800 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Email Us</h4>
+                                <p class="text-gray-600">hello@kingandchrist.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 text-green-800 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Call Us</h4>
+                                <p class="text-gray-600">(800) 555-1234</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="font-bold text-gray-800 mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gray-100 text-gray-700 p-3 rounded-full hover:bg-green-600 hover:text-white transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 text-gray-700 p-3 rounded-full hover:bg-green-600 hover:text-white transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 text-gray-700 p-3 rounded-full hover:bg-green-600 hover:text-white transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-gray-100 text-gray-700 p-3 rounded-full hover:bg-green-600 hover:text-white transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-sm">
+                        <h3 class="title-font text-2xl font-bold mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent">
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-700 transition duration-300">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-600 text-white p-2 rounded-full mr-3">
+                            <i class="fas fa-recycle text-xl"></i>
+                        </div>
+                        <a href="#" class="title-font text-2xl font-bold">King & Christ</a>
+                    </div>
+                    <p class="text-gray-400 mb-4">Sustainable packaging solutions for a greener tomorrow.</p>
+                    <p class="text-gray-400">© 2023 King & Christ. All rights reserved.</p>
+                </div>
+                
+                <div>
+                    <h4 class="title-font text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition duration-300">Products</a></li>
+                        <li><a href="#process" class="text-gray-400 hover:text-white transition duration-300">Our Process</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="title-font text-lg font-bold mb-4">Products</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Shipping Boxes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Custom Printed Boxes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Mailer Boxes</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Retail Packaging</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Specialty Boxes</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="title-font text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates on sustainable packaging.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-900 w-full">
+                        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded-r-lg hover:bg-green-700 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 mb-4 md:mb-0">Made with <i class="fas fa-heart text-red-500 mx-1"></i> for our planet</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-white transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-white transition duration-300">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for mobile menu toggle (could be expanded)
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const menu = document.querySelector('.hidden.md\\:flex');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'shadow-md', 'p-4', 'space-y-4');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'shadow-md', 'p-4', 'space-y-4');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
